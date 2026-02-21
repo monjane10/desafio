@@ -29,6 +29,9 @@ Aplicação full-stack que sincroniza coordenadas de vários utilizadores em tem
 - **Atualização periódica**: o cliente emite coordenadas imediatamente e a cada 4s, além do `watchPosition` para reagir a mudanças.
 - **Limpeza em tempo real**: ao `disconnect`, o servidor remove o utilizador e transmite a lista atualizada.
 - **Sem base de dados**: o estado vive apenas na memória do processo, alinhado com o requisito.
+- **Hardcoded para deploy rápido**:  
+  - Backend está com `CLIENT_ORIGIN` padrão `https://mapapp-git-main-monjane10s-projects.vercel.app`. Ajuste se mudar o domínio do frontend.  
+  - Frontend usa fallback `VITE_SOCKET_URL=https://mapp-app.onrender.com`. Defina a env em produção para o host atual do backend.
 
 ## Deploy sugerido
 - **Backend (Render/Railway/Fly.io)**  

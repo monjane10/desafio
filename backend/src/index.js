@@ -8,17 +8,12 @@ const CLIENT_ORIGIN =
   process.env.CLIENT_ORIGIN ||
   "https://mapapp-git-main-monjane10s-projects.vercel.app";
 
-const allowedOrigins = CLIENT_ORIGIN.split(",").map((o) => o.trim());
-
 const app = express();
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        return callback(null, origin);
-      }
-      return callback(new Error("Not allowed by CORS"));
-    },
+    // Abrir CORS para simplificar deploy; ajuste CLIENT_ORIGIN se quiser restringir.
+    origin: "*",
+    credentials: false,
   })
 );
 
@@ -29,7 +24,7 @@ app.get("/", (_req, res) => {
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: allowedOrigins,
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
