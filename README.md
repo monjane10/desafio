@@ -30,7 +30,7 @@ Aplicação full-stack que sincroniza coordenadas de vários utilizadores em tem
 - **Limpeza em tempo real**: ao `disconnect`, o servidor remove o utilizador e transmite a lista atualizada.
 - **Sem base de dados**: o estado vive apenas na memória do processo, alinhado com o requisito.
 - **Hardcoded para deploy rápido**:  
-  - Backend está com `CLIENT_ORIGIN` padrão `https://mapapp-git-main-monjane10s-projects.vercel.app`. Ajuste se mudar o domínio do frontend.  
+  - Backend está com `CLIENT_ORIGIN` padrão `https://mapapp-one.vercel.app`. Ajuste se mudar o domínio do frontend.  
   - Frontend usa fallback `VITE_SOCKET_URL=https://mapp-app.onrender.com`. Defina a env em produção para o host atual do backend.
 
 ## Deploy sugerido
