@@ -42,11 +42,10 @@ function App() {
     <div className="app">
       <header className="topbar">
         <div>
-          <p className="eyebrow">Live location</p>
+          <p className="eyebrow">Localização em tempo real</p>
           <h1>Mapa em tempo real entre utilizadores</h1>
           <p className="subtitle">
-            Partilha a tua posição e acompanha quem está ligado no mesmo
-            link. Sem refresh, sem base de dados.
+            Partilha a tua posição e acompanha quem está ligado no mesmo mapa.
           </p>
         </div>
         <div className="status-stack">

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { io } from "socket.io-client";
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:4000";
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "https://mappapp-vbqu.onrender.com";
 
 export const useSocket = () => {
   const [locations, setLocations] = useState([]);
